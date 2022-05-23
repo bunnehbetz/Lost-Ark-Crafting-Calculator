@@ -4,6 +4,7 @@
 
 <head>
   <title>Lost Ark Crafting Calculator</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Odibee Sans">
   <link type="text/css" rel="stylesheet" href="styles/main.css" />
   <script type="text/javascript" src="scripts/main.js"></script>
 </head>
@@ -15,24 +16,45 @@
         <tr>
             <td>
                 <label>Gold:</label>
+            </td>
+        </tr>
+        <tr>
+            <td>
                 <input type="number" id="gold" value="0" min="0">
             </td>
         </tr>
         <tr>
             <td>
-                <label>Name:</label>
-                <input type="text" id="name">
+                <label>Item Name:</label>
             </td>
             <td>
-                <label>Cost:</label>
-                <input type="number" id="cost" value="0" min="0">
+                <label>Cost per Bundle:</label>
             </td>
             <td>
-                <label>Bundle:</label>
-                <input type="number" id="bundle" value="0" min="0">
+                <label>Item per Bundle:</label>
             </td>
             <td>
                 <label>Material Needed:</label>
+            </td>
+            <td>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="text" id="name">
+            </td>
+            <td>
+                <input type="number" id="cost" value="0" min="0">
+            </td>
+            <td>
+                <select id="bundle">
+                    <option></option>
+                    <option>1</option>
+                    <option>10</option>
+                    <option>100</option>
+                </select>
+            </td>
+            <td>
                 <input type="number" id="mNeeded" value="0" min="0">
             </td>
             <td>
@@ -40,26 +62,31 @@
             </td>
         </tr>
     </table>
+    <hr>
     <table id="displayTable">
-        <tr>
+        <tr id="tableLabels">
             <td>
                 <label>Name</label>
             </td>
             <td>
-                <label>Cost</label>
+                <label>Cost per Bundle</label>
             </td>
             <td>
-                <label>Bundle</label>
+                <label>Item per Bundle</label>
             </td>
             <td>
                 <label>Material Needed</label>
             </td>
             <td>
-                <label>Gold</label>
+                <label>Value</label>
             </td>
         </tr>
     </table>
-    <label id="tGold">Total Gold: 0</label>
+    <label>Total Gold:</label>
+    <br>
+    <label id="tGold">0</label>
+    <br>
+    <br>
     <button onclick="resetClicked()" id="reset">Reset</button>
 </body>
 
